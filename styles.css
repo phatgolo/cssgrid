@@ -10,7 +10,6 @@ body {
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	padding-top: 55px;
 	background-color: #000;
 	color: #FFF;
 }
@@ -28,4 +27,14 @@ input {
 
 input:focus {
 	outline: none;
+}
+
+.error {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	color: #A03;
+	font-size: 2em;
+	text-align: center;
 }

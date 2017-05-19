@@ -13,7 +13,7 @@ class HTMLImageGalleryElement extends HTMLElement {
 		}
 
 		this._images = value;
-		this.updateGallery();
+		this._updateGallery();
 	}
 
 	constructor() {
@@ -29,11 +29,11 @@ class HTMLImageGalleryElement extends HTMLElement {
 		this._images = [];
 	}
 
-	connectedCallback () {
+	connectedCallback() {
 		this._list = this._root.querySelector('ul');
 	}
 
-	updateGallery() {
+	_updateGallery() {
 		this._list.innerHTML = '';
 		this._images.forEach((pic, i) => {
 			const listItem = this._listItemTemplate.content.cloneNode(true);

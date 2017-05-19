@@ -15,7 +15,7 @@ export class ImageService {
 	}
 
 	async getPictures(searchText) {
-		let url = `${ImageService.apiUrl}&q=${searchText}`;
+		const url = `${ImageService.apiUrl}&q=${searchText}`;
 		const response = await fetch(url, {'no-cors': true});
 		const result = await response.json();
 		return result.hits;

@@ -2,6 +2,7 @@
 	display: block;
 	background-color: #000;
 	box-sizing: border-box;
+	margin-top: 55px;
 	padding: 10px;
 	--height: 160px;
 }
@@ -54,12 +55,6 @@ p {
 				 0 0 2px #000;
     font-size: 3em;
 }
-
-
-li:hover img {
-	/*transform: scale(1.02);*/
-}
-
 
 li:after {
 	display: block;

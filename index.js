@@ -9,8 +9,7 @@ function init() {
 	searchBox.addEventListener('keyup', () => {
 		clearTimeout(timeout);
 		timeout = setTimeout(async () => {
-			let pictures = await imageService.getPictures(searchBox.value);
-			imageGallery.images = pictures.map(imageService.mapPicture);
+			imageGallery.images = await imageService.getImages(searchBox.value);
 			window.scrollTo(0, 0);
 		}, 500);
 	});

@@ -3,7 +3,7 @@ export class ImageService {
 		return 'https://pixabay.com/api/?key=5278245-f93d27064559883584e49e360&image_type=photo&per_page=200';
 	}
 
-	mapPicture(pic) {
+	mapImages(pic) {
 		return {
 			src: pic.webformatURL,
 			fullWidth: pic.imageWidth,
@@ -14,10 +14,10 @@ export class ImageService {
 		}
 	}
 
-	async getPictures(searchText) {
+	async getImages(searchText) {
 		const url = `${ImageService.apiUrl}&q=${searchText}`;
 		const response = await fetch(url, {'no-cors': true});
 		const result = await response.json();
-		return result.hits;
+		return result.hits.map(this.mapImages);
 	}
 }
